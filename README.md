@@ -3,7 +3,11 @@ Object detection program to count relief valves on P&amp;IDs by retraining Resne
 
 (Readme still under development)
 
+Acknowledgments:
+
 Thanks for Dat Tran (https://github.com/datitran) for the excellent medium artile on applying transfer learning on pre-training models (https://medium.com/towards-data-science/how-to-train-your-own-object-detector-with-tensorflows-object-detector-api-bec72ecfe1d9)
+
+Optional Additional Software:
 
 The data was annotated using labelImg (https://github.com/tzutalin/labelImg).
 
@@ -15,8 +19,10 @@ Additional Steps to Dat Tran's Work
 
 3) To handle situations where the target symbol might be split between two segments, the segmentation routine overlapped the segments by 20 pixel border 
 
-4) After segmenting the images, I saved them and used labelImg to draw bounding boxes
+4) After segmenting the images, I saved them and used labelImg(https://github.com/tzutalin/labelImg) to draw bounding boxes.
 
-5) The xx script was used to convert the xml COCO format to
+5) lableImg saves the annotated data in COCO format as XML. The https://github.com/Guanghan/darknet/blob/master/scripts/voc_label.py script was used to convert the COCO format annoation to one image per line csv annotation text file.
 
-6) The 
+6) The csv file with training annotations was manually split into training and testing sets.
+
+7) The tf_record script was used to convert the images and the csv files into tf record expected for tensorflow
