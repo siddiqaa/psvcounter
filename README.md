@@ -32,11 +32,11 @@ After saving the image segments, I used <a href="https://github.com/tzutalin/lab
 
 <h3>Conversion of Annotation from XML to Text</h3>
 
-lableImg saves the bounding box annotation data in COCO format as XML. I then used a modified version of the <a href="https://github.com/Guanghan/darknet/blob/master/scripts/voc_label.py"> conversion script</a> from <a href="https://github.com/Guanghan"> Guanghan </a> to convert the individual annotation file for each trainiing image into a single CSV master file that had one line per training image containing the image file name and data on the class(es) and bounding box(es). 
+lableImg saves the bounding box annotation data in COCO format as XML. I then used a modified version of the <a href="https://github.com/Guanghan/darknet/blob/master/scripts/voc_label.py"> conversion script</a> from <a href="https://github.com/Guanghan"> Guanghan </a> to convert the individual annotation file for each trainiing image into a single CSV master file that had one line per training image containing the image file name and data on the class(es) and bounding box(es). The <a href="https://github.com/siddiqaa/psvcounter/tree/master/data>data folder</a> in my repo contains the image files, the xml annotation from labelIMG and the combined csv text file describing annotations for the all the images used for training and testing. The script for combined and convert xml annotation is <a href="https://github.com/siddiqaa/psvcounter/blob/master/data/xml_to_csv.py">here</a>
 
 <h3>Manual Split of Annotation Text Files into Train and Test</h3>
 
-6) The csv file with training annotations was manually split into training and testing sets.
+The csv file with training annotations was manually split into training and testing sets.
 
 <h3>Integration and Conversion of Images and Annotation Files into tf_record</h3>
 
