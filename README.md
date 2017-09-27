@@ -1,6 +1,8 @@
 # psvcounter
 Tensorflow object detection example to count relief valves on P&IDs by retraining the final layer of the Google SSD Inception V2 model
 
+Examples of symbols to be detected
+<img href="https://github.com/siddiqaa/psvcounter/blob/master/presentation_materials/Images/page_10%40_1214.jpg">
 
 Acknowledgments:
 
