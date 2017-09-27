@@ -1,11 +1,16 @@
 # psvcounter
 Tensorflow object detection example to count relief valves on P&IDs by retraining the final layer of the Google SSD Inception V2 model
 
-Examples of symbols to be detected <br>
+Examples of relatively small symbols denoting reliev vales  to be detected <br>
+<ul>
+<li><img style='border:10px solid #000000' src="https://github.com/siddiqaa/psvcounter/blob/master/presentation_materials/Images/page_10%40_1214.jpg"></li>
+<li><img style='border:10px solid #000000' src="https://github.com/siddiqaa/psvcounter/blob/master/presentation_materials/Images/page_19@_157.jpg"></li>
+<li><img style='border:10px solid #000000' src="https://github.com/siddiqaa/psvcounter/blob/master/presentation_materials/Images/page_7@_216.jpg"></li>
+</ul>
 
-<img style='border:10px solid #000000' src="https://github.com/siddiqaa/psvcounter/blob/master/presentation_materials/Images/page_10%40_1214.jpg">
-<img style='border:10px solid #000000' src="https://github.com/siddiqaa/psvcounter/blob/master/presentation_materials/Images/page_19@_157.jpg">
-<img style='border:10px solid #000000' src="https://github.com/siddiqaa/psvcounter/blob/master/presentation_materials/Images/page_7@_216.jpg">
+on large drawings (e.g.)
+
+<img style='border:10px solid #000000' src="http://ptgmedia.pearsoncmg.com/images/chap1_9780132618120/elementLinks/01fig07_alt.jpg"><br>
 
 Acknowledgments:
 
