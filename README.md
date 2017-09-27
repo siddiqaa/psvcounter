@@ -16,7 +16,7 @@ Optional Additional Software:
 
 </ul>
 
-Training Workflow Steps:
+<h2>Training Workflow Steps:</h2>
 
 Conversion from PDF
 
