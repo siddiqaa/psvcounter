@@ -78,7 +78,7 @@ tar -xvf ssd_inception_v2_coco_11_06_2017.tar.gz
 
 Finally, the <a href="https://github.com/siddiqaa/psvcounter/blob/master/models/ssd_inception_v2_coco.config">training pipeline configuration file</a> is customized. There are four customizations needed in this file:
 <ol>
-<li>Update the number of clases on line xx</ol>
+<li>Update the number of clases on line xx</li>
 <li>Update the file location path to the train and test record files in lines xx and xx respectively</li>
 <li>Update the file location path to the class label map created earlier in line xx and xx.</li>
 <li>Update the file location path to the pre-trained model in line xx.</li>
