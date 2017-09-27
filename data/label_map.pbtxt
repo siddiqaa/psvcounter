@@ -1,0 +1,20 @@
+item {
+  id: 1
+  name: 'psv'
+}
+item {
+  id: 2
+  name: 'verticaltext'
+}
+item {
+  id: 3
+  name: 'valve'
+}
+item {
+  id: 4
+  name: 'instrumenttag'
+}
+item {
+  id: 5
+  name: 'verticalvalve'
+}

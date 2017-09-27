@@ -1,0 +1,26 @@
+<annotation>
+	<folder>data</folder>
+	<filename>page_50@_1084.jpg</filename>
+	<path>/home/adnan/psv_small_google_compute/data/page_50@_1084.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>122</width>
+		<height>129</height>
+		<depth>1</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>verticaltext</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>36</xmin>
+			<ymin>1</ymin>
+			<xmax>60</xmax>
+			<ymax>128</ymax>
+		</bndbox>
+	</object>
+</annotation>

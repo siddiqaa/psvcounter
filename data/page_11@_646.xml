@@ -1,0 +1,26 @@
+<annotation>
+	<folder>data</folder>
+	<filename>page_11@_646.jpg</filename>
+	<path>/home/adnan/psv_small_google_compute/data/page_11@_646.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>121</width>
+		<height>129</height>
+		<depth>1</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>valve</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>32</xmin>
+			<ymin>47</ymin>
+			<xmax>73</xmax>
+			<ymax>93</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,26 @@
+<annotation>
+	<folder>psv</folder>
+	<filename>page_55@_86.jpg</filename>
+	<path>C:\Users\Adnan\PycharmProjects\PSVCounter\psvdiagrams_small\psv\page_55@_86.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>121</width>
+		<height>130</height>
+		<depth>1</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>psv</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>63</xmin>
+			<ymin>45</ymin>
+			<xmax>94</xmax>
+			<ymax>105</ymax>
+		</bndbox>
+	</object>
+</annotation>
