@@ -41,7 +41,7 @@ After the python script generated the csv file, I then used a spreadsheet to spl
 <h3>Creation of label map file</h3>
 
 A simple json file is also needed to tell the class names for the bounding boxes in the training data. So I created the <a href="https://github.com/siddiqaa/psvcounter/blob/master/data/label_map.pbtxt">label_map.pbtxt</a> file containing the following text.<br>
-'''json
+'''JSON
 {
   id: 1
   name: 'psv'
