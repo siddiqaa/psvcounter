@@ -1,11 +1,10 @@
 # psvcounter
-Object detection program to count relief valves on P&amp;IDs by retraining the final layer of the Google SSD Inception V2 model in Tensorflow. 
+Tensorflow object detection example to count relief valves on P&IDs by retraining the final layer of the Google SSD Inception V2 model
 
-(Readme still under development)
 
 Acknowledgments:
 
-Thanks for Dat Tran (https://github.com/datitran) for the excellent medium article on applying transfer learning on pre-trained object detection models (https://medium.com/towards-data-science/how-to-train-your-own-object-detector-with-tensorflows-object-detector-api-bec72ecfe1d9)
+Thanks to <a href="https://github.com/datitran">Dat Tran</a> for the excellent medium article on applying <a href="https://medium.com/towards-data-science/how-to-train-your-own-object-detector-with-tensorflows-object-detector-api-bec72ecfe1d9">transfer learning on pre-trained object detection models</a>
 
 Optional Additional Software:
 <ul>
