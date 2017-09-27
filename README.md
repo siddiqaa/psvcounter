@@ -68,6 +68,7 @@ python3.6 generate_tfrecord.py --csv_input=train_labels.csv  --output_path=train
 ```
 python3.6 generate_tfrecord.py --csv_input=test_labels.csv  --output_path=test.record
 ```
+<br>
 The files train.record and test.record are created from the two commands above.
 
 <h3>Training</h3>
