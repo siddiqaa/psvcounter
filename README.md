@@ -10,9 +10,9 @@ Thanks for Dat Tran (https://github.com/datitran) for the excellent medium artic
 Optional Additional Software:
 <ul>
 
-<li>- labelImg (https://github.com/tzutalin/labelImg) for bounding box annotation on training and test data</li>
-- ImageMagick (http://www.imagemagick.org/script/index.php) for manipluting bitmap (jpg) images
-- GhostScript (https://www.ghostscript.com/) for pdf manipulation and conversion to jpg
+<li> <a href = "https://github.com/tzutalin/labelImg">labelImg</a> for bounding box annotation on training and test data</li>
+<li> <a href = "http://www.imagemagick.org/script/index.php">ImageMagick</a> for manipluting bitmap (jpg) images</li>
+<li> <a href = "https://www.ghostscript.com/">GhostScript</a> for pdf manipulation and conversion to jpg</li>
 
 </ul>
 
