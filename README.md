@@ -16,9 +16,9 @@ Optional Additional Software:
 
 </ul>
 
-<h2>Training Workflow Steps:</h2>
+<h2>Training Workflow Steps</h2>
 
-Conversion from PDF
+<h3>Conversion from PDF</h3>
 
 1) For my use case, the images to be processed were 11 x 17 size pages in a PDF. Pages from PDF can be converted into individual jpg files using either ImageMagick or Ghostscript.
 
