@@ -78,13 +78,14 @@ tar -xvf ssd_inception_v2_coco_11_06_2017.tar.gz
 
 Finally, the <a href="https://github.com/siddiqaa/psvcounter/blob/master/models/ssd_inception_v2_coco.config">training pipeline configuration file</a> is customized. There are four customizations needed in this file:
 <ol>
-<li>Update the number of clases on line xx</li>
-<li>Update the file location path to the train and test record files in lines xx and xx respectively</li>
-<li>Update the file location path to the class label map created earlier in line xx and xx.</li>
-<li>Update the file location path to the pre-trained model in line xx.</li>
+<li>Update the number of clases on line 9</li>
+<li>Update the file location path to the train and test record files in lines 171 and 185 respectively</li>
+<li>Update the file location path to the class label map created earlier in line 173 and 187.</li>
+<li>Update the file location path to the pre-trained model in line 152.</li>
 </ol>
 
+<h2>Ready to Train</h2>
+Finally, everything is ready to train. Training is done using scripts from the <a href="https://github.com/tensorflow/models">tensorflow models repository</a> and specifically the <a href="https://github.com/tensorflow/models/tree/master/research/object_detection">following folder</a>
 
-Classification Split
 
-Initially, I used ImageMagick to segment each 11 x 17 page and save the resulting segments. However, the process took quite a while and I then chose to load the 11 x 17 image directly into a Numpy array and extract subsections of the array to feed into Tensorflow. This reduced the training and classification time significantly.
+<to be continued ....>
