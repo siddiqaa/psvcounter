@@ -89,6 +89,7 @@ Finally, everything is ready to train. Training is done using scripts from the <
 ```
 python3.6 pip -m setup.py install
 ```
+
 Installing the scripts as well as tensorflow on the Ubuntu machine that I used gave some unique errors that I had to research and resolve. You will likely face some errors and may have to do the same.
 
 
