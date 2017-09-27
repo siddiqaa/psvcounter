@@ -3,14 +3,14 @@ Tensorflow object detection example to count relief valves on P&IDs by retrainin
 
 Examples of relatively small symbols denoting reliev vales  to be detected <br>
 <ul>
-<li><img style='border:10px solid #111' src="https://github.com/siddiqaa/psvcounter/blob/master/presentation_materials/Images/page_10%40_1214.jpg"></li>
-<li><img style='border:10px solid #111' src="https://github.com/siddiqaa/psvcounter/blob/master/presentation_materials/Images/page_19@_157.jpg"></li>
-<li><img style='border:10px solid #111' src="https://github.com/siddiqaa/psvcounter/blob/master/presentation_materials/Images/page_7@_216.jpg"></li>
+<li><img src="https://github.com/siddiqaa/psvcounter/blob/master/presentation_materials/Images/page_10%40_1214.jpg"></li>
+<li><img src="https://github.com/siddiqaa/psvcounter/blob/master/presentation_materials/Images/page_19@_157.jpg"></li>
+<li><img src="https://github.com/siddiqaa/psvcounter/blob/master/presentation_materials/Images/page_7@_216.jpg"></li>
 </ul>
 
 on large drawings like this
 
-<img style='border:10px solid #111' src="http://ptgmedia.pearsoncmg.com/images/chap1_9780132618120/elementLinks/01fig07_alt.jpg"><br>
+<img src="http://ptgmedia.pearsoncmg.com/images/chap1_9780132618120/elementLinks/01fig07_alt.jpg"><br>
 
 Acknowledgments:
 
