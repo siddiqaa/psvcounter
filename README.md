@@ -63,12 +63,10 @@ The id for the first object class in the map must start at 1 and not 0.
 The <a href="https://github.com/siddiqaa/psvcounter/blob/master/data/generate_tfrecord.py">generate_tfrecord.py"</a> script was used to convert the images and the csv files into tf record expected for tensorflow. On Linux, the following commands were run from the data directory: <br>
 ```
 python3.6 generate_tfrecord.py --csv_input=train_labels.csv  --output_path=train.record
-```
-<br>
-```
+
 python3.6 generate_tfrecord.py --csv_input=test_labels.csv  --output_path=test.record
 ```
-<br>
+
 The files train.record and test.record are created from the two commands above.
 
 <h3>Training</h3>
