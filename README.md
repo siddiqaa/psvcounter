@@ -71,12 +71,18 @@ The files train.record and test.record are created from the two commands above.
 
 <h3>Downloading the Pre-Trained Model</h3>
 
-We are now ready to download the pre-trained model from the <a href="https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md">Tensorflow detection model zoo</a>. In this case, I used the model <a href="http://download.tensorflow.org/models/object_detection/ssd_inception_v2_coco_11_06_2017.tar.gz">ssd_inception_v2_coco_11_06_2017</a> model. The tarball should be moved into the models directory and exracted with the following command.<br>
+The next step is to download the pre-trained model from the <a href="https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md">Tensorflow detection model zoo</a>. In this case, I used the model <a href="http://download.tensorflow.org/models/object_detection/ssd_inception_v2_coco_11_06_2017.tar.gz">ssd_inception_v2_coco_11_06_2017</a> model. The tarball should be moved into the models directory and exracted with the following command.<br>
 ```
 tar -xvf ssd_inception_v2_coco_11_06_2017.tar.gz
 ```
 
-We are now ready to configure the training pipeline configuration in <a href=""></a>. The number of clases should be updated as well as the <PATH_TO_BE_CONFIGURED> variable.
+Finally, the <a href="https://github.com/siddiqaa/psvcounter/blob/master/models/ssd_inception_v2_coco.config">training pipeline configuration file</a> is customized. There are four customizations needed in this file:
+<ol>
+<li>Update the number of clases on line xx</ol>
+<ol>Update the file location path to the train and test record files in lines xx and xx respectively</li>
+<ol>Update the file location path to the class label map created earlier in line xx and xx.</li>
+<ol>Update the file location path to the pre-trained model in line xx.</li>
+<ol>
 
 
 Classification Split
