@@ -69,7 +69,11 @@ python3.6 generate_tfrecord.py --csv_input=test_labels.csv  --output_path=test.r
 
 The files train.record and test.record are created from the two commands above.
 
-<h3>Training</h3>
+<h3>Downloading the Pre-Trained Model</h3>
+
+We are now ready to download the pre-trained model from <a href="">Google model zoo</a>. In this case, I used the model found at <a href="">here</a>. The tarball should be moved into the models directory and exracted with the following command. 
+
+We are now ready to configure the training pipeline configuration in <a href=""></a>. The number of clases should be updated as well as the <PATH_TO_BE_CONFIGURED> variable.
 
 
 Classification Split
