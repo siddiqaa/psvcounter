@@ -25,7 +25,7 @@ Optional Additional Software:
 
 </ul>
 
-<h2>Training Workflow Steps</h2>
+<h2>Training Preparation</h2>
 
 <h3>Conversion from PDF</h3>
 
@@ -84,7 +84,8 @@ Finally, the <a href="https://github.com/siddiqaa/psvcounter/blob/master/models/
 <li>Update the file location path to the pre-trained model in line 152.</li>
 </ol>
 
-<h2>Ready to Train</h2>
+<h2>Training</h2>
+<h3>Downloading the Training Scripts</h3>
 Finally, everything is ready to train. Training is done using scripts from the <a href="https://github.com/tensorflow/models">tensorflow models repository</a> and specifically the scripts in the <a href="https://github.com/tensorflow/models/tree/master/research/object_detection">object detection folder</a>. The repo should be cloned to your local directory and the script <a href="https://github.com/tensorflow/models/blob/master/research/setup.py">setup.py</a> in the research folder executed using pip before starting the training. <br>
 ```shell
 python3.6 pip -m setup.py install
