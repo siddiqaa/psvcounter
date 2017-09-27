@@ -41,7 +41,7 @@ After saving the image segments, I used <a href="https://github.com/tzutalin/lab
 
 <h3>Conversion of Annotation from XML to Text</h3>
 
-lableImg saves the bounding box annotation data in COCO format as XML. I then used a modified version of the <a href="https://github.com/Guanghan/darknet/blob/master/scripts/voc_label.py">conversion script</a> from <a href="https://github.com/Guanghan">Guanghan</a> to convert the individual annotation file for each trainiing image into a single CSV master file that had one line per training image containing the image file name and data on the class(es) and bounding box(es). The <a href="https://github.com/siddiqaa/psvcounter/tree/master/data">data folder</a> in my repo contains the image files, the xml annotation from labelIMG and the combined csv text file describing annotations for the all the images used for training and testing. The script for combined and convert xml annotation is <a href="https://github.com/siddiqaa/psvcounter/blob/master/data/xml_to_csv.py">here</a>. It should be run in the same directory as where all the xml files from labelIMG are stored. Line 31 should be modified to change the file name for the csv file for your own project.
+lableImg saves the bounding box annotation data in COCO format as XML. I then used a modified version of the <a href="https://github.com/Guanghan/darknet/blob/master/scripts/voc_label.py">conversion script</a> from <a href="https://github.com/Guanghan">Guanghan</a> to convert the individual annotation file for each trainiing image into a single CSV master file that had one line per training image containing the image file name and data on the class(es) and bounding box(es). The <a href="https://github.com/siddiqaa/psvcounter/tree/master/data">data folder</a> in my repo contains the image files, the xml annotation from labelIMG and the combined csv text file describing annotations for the all the images used for training and testing. The script for combined and convert xml annotation is <a href="https://github.com/siddiqaa/psvcounter/blob/master/data/xml_to_csv.py">xml_to_csv.py</a>. It should be run in the same directory as where all the xml files from labelIMG are stored. Line 31 should be modified to change the file name for the csv file for your own project.
 
 <h3>Manual Split of Annotation Text Files into Train and Test</h3>
 
@@ -60,7 +60,7 @@ The id for the first object class in the map must start at 1 and not 0.
 
 <h3>Integration and Conversion of Images and Annotation Files into tf_record</h3>
 
-The <a href="tf_record script was used to convert the images and the csv files into tf record expected for tensorflow. On Linux, the following commands were run from the data directory: <br>
+The <a href="https://github.com/siddiqaa/psvcounter/blob/master/data/generate_tfrecord.py">generate_tfrecord.py"</a> script was used to convert the images and the csv files into tf record expected for tensorflow. On Linux, the following commands were run from the data directory: <br>
 ```
 python3.6 generate_tfrecord.py --csv_input=train_labels.csv  --output_path=train.record
 ```
@@ -68,6 +68,7 @@ python3.6 generate_tfrecord.py --csv_input=train_labels.csv  --output_path=train
 ```
 python3.6 generate_tfrecord.py --csv_input=test_labels.csv  --output_path=test.record
 ```
+The files train.record and test.record are created from the two commands above.
 
 <h3>Training</h3>
 
