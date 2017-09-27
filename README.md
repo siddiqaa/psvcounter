@@ -61,7 +61,7 @@ The id for the first object class in the map must start at 1 and not 0.
 <h3>Integration and Conversion of Images and Annotation Files into tf_record</h3>
 
 The <a href="https://github.com/siddiqaa/psvcounter/blob/master/data/generate_tfrecord.py">generate_tfrecord.py"</a> script was used to convert the images and the csv files into tf record expected for tensorflow. On Linux, the following commands were run from the data directory: <br>
-```
+```shell
 python3.6 generate_tfrecord.py --csv_input=train_labels.csv  --output_path=train.record
 
 python3.6 generate_tfrecord.py --csv_input=test_labels.csv  --output_path=test.record
@@ -72,7 +72,7 @@ The files train.record and test.record are created from the two commands above.
 <h3>Downloading the Pre-Trained Model</h3>
 
 The next step is to download the pre-trained model from the <a href="https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md">Tensorflow detection model zoo</a>. In this case, I used the model <a href="http://download.tensorflow.org/models/object_detection/ssd_inception_v2_coco_11_06_2017.tar.gz">ssd_inception_v2_coco_11_06_2017</a> model. The tarball should be moved into the models directory and exracted with the following command.<br>
-```
+```shell
 tar -xvf ssd_inception_v2_coco_11_06_2017.tar.gz
 ```
 
@@ -86,7 +86,7 @@ Finally, the <a href="https://github.com/siddiqaa/psvcounter/blob/master/models/
 
 <h2>Ready to Train</h2>
 Finally, everything is ready to train. Training is done using scripts from the <a href="https://github.com/tensorflow/models">tensorflow models repository</a> and specifically the scripts in the <a href="https://github.com/tensorflow/models/tree/master/research/object_detection">object detection folder</a>. The repo should be cloned to your local directory and the script <a href="https://github.com/tensorflow/models/blob/master/research/setup.py">setup.py</a> in the research folder executed using pip before starting the training.<br>
-```
+```shell
 python3.6 pip -m setup.py install
 ```
 
