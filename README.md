@@ -20,29 +20,29 @@ Optional Additional Software:
 
 <h3>Conversion from PDF</h3>
 
-1) For my use case, the images to be processed were 11 x 17 size pages in a PDF. Pages from PDF can be converted into individual jpg files using either ImageMagick or Ghostscript.
+For my use case, the images to be processed were 11 x 17 size pages in a PDF. Pages from PDF can be converted into individual jpg files using either ImageMagick or Ghostscript.
 
-Image Segmentation into Smaller Sizes
+<h3>Image Segmentation into Smaller Sizes</h3>
 
 2) The Google SSD Inception V2 model is trained on images of size 299 by 299 so I had to segment the images into smaller sections that were 122 by 129. This size gave me a good ration of full image to target bounding box. The bounding box was not too small or too large compared to the overall segment image dimensions.To handle situations where the target symbol might be split between two segments, I used the overlap feature in ImageMagick to overlapped the segmens by 20 pixels on each side.
 
-Training Data Annotation
+<h3>Training Data Annotation</h3>
 
 3) After segmenting the images, I saved them and used labelImg (https://github.com/tzutalin/labelImg) to draw bounding boxes.
 
-Conversion of Annotation from XML to Text
+<h3>Conversion of Annotation from XML to Text</h3>
 
 4) lableImg saves the annotated data in COCO format as XML. The https://github.com/Guanghan/darknet/blob/master/scripts/voc_label.py script was used to convert the COCO format annoation to one image per line csv annotation text file.
 
-Manual Split of Annotation Text Files into Train and Test
+<h3>Manual Split of Annotation Text Files into Train and Test</h3>
 
 6) The csv file with training annotations was manually split into training and testing sets.
 
-Integration and Conversion of Images and Annotation Files into tf_record
+<h3>Integration and Conversion of Images and Annotation Files into tf_record</h3>
 
 7) The tf_record script was used to convert the images and the csv files into tf record expected for tensorflow
 
-Training
+<h3>Training</h3>
 
 
 Classification Split
