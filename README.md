@@ -85,7 +85,11 @@ Finally, the <a href="https://github.com/siddiqaa/psvcounter/blob/master/models/
 </ol>
 
 <h2>Ready to Train</h2>
-Finally, everything is ready to train. Training is done using scripts from the <a href="https://github.com/tensorflow/models">tensorflow models repository</a> and specifically the scripts in the <a href="https://github.com/tensorflow/models/tree/master/research/object_detection">object detection folder</a>. The repo should be cloned to your local directory and the script <a href="https://github.com/tensorflow/models/blob/master/research/setup.py">setup.py</a> in the research folder executed using pip before starting the training. Installing the scripts as well as tensorflow on the Ubuntu machine that I used gave some unique errors that I had to research and resolve. You will likely face some errors and may have to do the same.
+Finally, everything is ready to train. Training is done using scripts from the <a href="https://github.com/tensorflow/models">tensorflow models repository</a> and specifically the scripts in the <a href="https://github.com/tensorflow/models/tree/master/research/object_detection">object detection folder</a>. The repo should be cloned to your local directory and the script <a href="https://github.com/tensorflow/models/blob/master/research/setup.py">setup.py</a> in the research folder executed using pip before starting the training.<br>
+```
+python3.6 pip -m setup.py install
+```
+Installing the scripts as well as tensorflow on the Ubuntu machine that I used gave some unique errors that I had to research and resolve. You will likely face some errors and may have to do the same.
 
 
 <to be continued ....>
