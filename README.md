@@ -24,15 +24,15 @@ For my use case, the images to be processed were 11 x 17 size pages in a PDF. Pa
 
 <h3>Image Segmentation into Smaller Sizes</h3>
 
-2) The Google SSD Inception V2 model is trained on images of size 299 by 299 so I had to segment the images into smaller sections that were 122 by 129. This size gave me a good ration of full image to target bounding box. The bounding box was not too small or too large compared to the overall segment image dimensions.To handle situations where the target symbol might be split between two segments, I used the overlap feature in ImageMagick to overlapped the segmens by 20 pixels on each side.
+The Google SSD Inception V2 model is trained on images of size 299 by 299 so I had to segment the images into smaller sections that were 122 by 129. This size gave me a good ratio of segment image dimensions to target object bounding box dimension. In other words, the bounding box for the object to be detected was not too small or too large compared to the overall segment image dimensions. To handle situations where the target object to be detected might be split between two different segments, I used the overlap feature in ImageMagick to overlap the segments by 20 pixels on each side.
 
 <h3>Training Data Annotation</h3>
 
-3) After segmenting the images, I saved them and used labelImg (https://github.com/tzutalin/labelImg) to draw bounding boxes.
+After saving the image segments, I used <a href="https://github.com/tzutalin/labelImg">labelImg</a> to draw bounding boxes.
 
 <h3>Conversion of Annotation from XML to Text</h3>
 
-4) lableImg saves the annotated data in COCO format as XML. The https://github.com/Guanghan/darknet/blob/master/scripts/voc_label.py script was used to convert the COCO format annoation to one image per line csv annotation text file.
+lableImg saves the bounding box annotation data in COCO format as XML. I then used a modified version of the <a href="https://github.com/Guanghan/darknet/blob/master/scripts/voc_label.py"> conversion script</a> from <a href="https://github.com/Guanghan"> Guanghan </a> to convert the COCO format annoation to one image per line csv annotation text file.
 
 <h3>Manual Split of Annotation Text Files into Train and Test</h3>
 
