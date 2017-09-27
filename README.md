@@ -12,7 +12,7 @@ on large drawings like this
 
 <img src="http://ptgmedia.pearsoncmg.com/images/chap1_9780132618120/elementLinks/01fig07_alt.jpg"><br>
 
-Acknowledgments:
+<h2>Acknowledgments</h2>
 
 Thanks to <a href="https://github.com/datitran">Dat Tran</a> for the excellent medium article on applying <a href="https://medium.com/towards-data-science/how-to-train-your-own-object-detector-with-tensorflows-object-detector-api-bec72ecfe1d9">transfer learning on pre-trained object detection models</a>
 
@@ -60,7 +60,14 @@ The id for the first object class in the map must start at 1 and not 0.
 
 <h3>Integration and Conversion of Images and Annotation Files into tf_record</h3>
 
-The tf_record script was used to convert the images and the csv files into tf record expected for tensorflow
+The <a href="tf_record script was used to convert the images and the csv files into tf record expected for tensorflow. On Linux, the following commands were run from the data directory: <br>
+```
+python3.6 generate_tfrecord.py --csv_input=train_labels.csv  --output_path=train.record
+```
+<br>
+```
+python3.6 generate_tfrecord.py --csv_input=test_labels.csv  --output_path=test.record
+```
 
 <h3>Training</h3>
 
