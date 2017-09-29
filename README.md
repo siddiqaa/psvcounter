@@ -1,7 +1,7 @@
 # psvcounter
 Tensorflow object detection example to count relief valves on P&IDs by retraining the final layer of the Google SSD Inception V2 model
 
-Examples of relatively small symbols denoting reliev vales  to be detected <br>
+Examples of relatively small symbols showing the relieve valves symbols to be detected in this example. <br>
 <ul>
 <li><img src="https://github.com/siddiqaa/psvcounter/blob/master/presentation_materials/Images/page_10%40_1214.jpg"></li>
 <li><img src="https://github.com/siddiqaa/psvcounter/blob/master/presentation_materials/Images/page_19@_157.jpg"></li>
@@ -45,7 +45,7 @@ lableImg saves the bounding box annotation data in COCO format as XML. I then us
 
 <h3>Manual Split of Annotation Text Files into Train and Test</h3>
 
-After the python script generated the csv file, I then used a spreadsheet to split the records into two files - "train_labels.csv" and "test_labels.csv". It was pure cut and paste operation. No data was edited in generating the two files. I aimed for about 10% of the records for testing. There is probably a way to automate this in Tensorflow to have random splits for each training step but I did not research and implement this for my project.
+After the python script generated the csv file, I then used a spreadsheet to split the records into two files - "train_labels.csv" and "test_labels.csv". It was pure cut and paste operation. No data was edited in generating the two files. I aimed for about 10% of the records for testing. There is probably a way to automate this in Tensorflow to have random splits for each training step but I did not implement this for my project. Modifying the code in this example for random split of test and train would deliver better results and reduce the over-fitting. In this case, over-fitting and a high number of false positives was not a concern in the production and actual use environment.
 
 <h3>Creation of label map file</h3>
 
@@ -121,5 +121,5 @@ The command above will generat an output_inference_grap.pb file with the neural 
 
 <h2>Using the Trained Model</h2>
 
-I modified the <a href="https://github.com/datitran/object_detector_app/blob/master/object_detection_app.py">simple object detection script</a> by Dat Tran to add loading and segmenation of large jpeg images before feeding into the tensor_flow model. My modified script is found <a href="https://github.com/siddiqaa/psvcounter/blob/master/DetectPSVs.py">here</a>
+I modified the <a href="https://github.com/datitran/object_detector_app/blob/master/object_detection_app.py">simple object detection script</a> by Dat Tran to add loading and segmenation of large jpeg images before feeding into the tensor_flow model. My modified script is found <a href="https://github.com/siddiqaa/psvcounter/blob/master/DetectPSVs.py">here</a>.
 
