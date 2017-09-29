@@ -121,5 +121,5 @@ The command above will generat an output_inference_grap.pb file with the neural 
 
 <h2>Using the Trained Model</h2>
 
-I modified the <a href="https://github.com/datitran/object_detector_app/blob/master/object_detection_app.py">simple object detection script</a> by Dat Tran to add loading and segmenation of large jpeg images before feeding into the tensor_flow model. My modified script is found <a href"https://github.com/siddiqaa/psvcounter/blob/master/DetectPSVs.py"=>here</a>
+I modified the <a href="https://github.com/datitran/object_detector_app/blob/master/object_detection_app.py">simple object detection script</a> by Dat Tran to add loading and segmenation of large jpeg images before feeding into the tensor_flow model. My modified script is found <a href="https://github.com/siddiqaa/psvcounter/blob/master/DetectPSVs.py">here</a>
 
