@@ -93,7 +93,7 @@ Finally, everything is ready to train. Training is done using scripts from the <
 
 ```shell
 python3.6 pip -m setup.py install
-```
+``` can 
 
 Installing the scripts as well as tensorflow on the Ubuntu machine that I used gave some unique installation errors and headaches that I had to research and resolve. You will likely face some errors and may have to do the same. If you get an error about "no module named 'depolyment'". Execute the following command from the models subirectory in the repo you downloaded above.
 
@@ -119,7 +119,7 @@ python3.6 object_detection/export_inference_graph.py     --input_type image_tens
 
 The command above will generat an output_inference_grap.pb file with the neural network model weights using the last available checkpoint saved data from training. The output_inference_grap.pb file is used in the actual object detection.
 
+<h2>Using the Trained Model</h2>
 
- 
+I modified the <a href="https://github.com/datitran/object_detector_app/blob/master/object_detection_app.py">simple object detection script</a> by Dat Tran to add loading and segmenation of large jpeg images before feeding into the tensor_flow model. My modified script is found <a href=>here</a>
 
-<to be continued ....>
