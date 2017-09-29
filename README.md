@@ -20,8 +20,6 @@ Optional Additional Software:
 <ul>
 
 <li> <a href = "https://github.com/tzutalin/labelImg">labelImg</a> for bounding box annotation on training and test data</li>
-<li> <a href = "http://www.imagemagick.org/script/index.php">ImageMagick</a> for manipluting bitmap (jpg) images</li>
-<li> <a href = "https://www.ghostscript.com/">GhostScript</a> for pdf manipulation and conversion to jpg</li>
 
 </ul>
 
@@ -29,11 +27,11 @@ Optional Additional Software:
 
 <h3>Conversion from PDF</h3>
 
-For my use case, the images to be processed were 11 x 17 size pages in a PDF. Pages from PDF can be converted into individual jpg files using either ImageMagick or Ghostscript.
+For my use case, the images to be processed were 11 x 17 size pages in a PDF. I extracted and converted each page from the PDF into an invidual jpg file. Segmentation of the file was done using code similar to the segmentation block in <a href="https://github.com/siddiqaa/psvcounter/blob/master/DetectPSVs.py"> detection application script</a>.
 
 <h3>Image Segmentation into Smaller Sizes</h3>
 
-The Google SSD Inception V2 model is trained on images of size 299 by 299 so I had to segment the images into smaller sections that were 122 by 129. This size gave me a good ratio of segment image dimensions to target object bounding box dimension. In other words, the bounding box for the object to be detected was not too small or too large compared to the overall segment image dimensions. To handle situations where the target object to be detected might be split between two different segments, I used the overlap feature in ImageMagick to overlap the segments by 20 pixels on each side.
+The Google SSD Inception V2 model is trained on images of size 299 by 299 so I had to segment the images into smaller sections that were 122 by 129. This size gave me a good ratio of segment image dimensions to target object bounding box dimension. In other words, the bounding box for the object to be detected was not too small or too large compared to the overall segment image dimensions. To handle situations where the target object to be detected might be split between two different segments, I overlapped the segments by 20 pixels on each side.
 
 <h3>Training Data Annotation</h3>
 
