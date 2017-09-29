@@ -60,7 +60,7 @@ The id for the first object class in the map must start at 1 and not 0.
 
 <h3>Integration and Conversion of Images and Annotation Files into tf_record</h3>
 
-The <a href="https://github.com/siddiqaa/psvcounter/blob/master/data/generate_tfrecord.py">generate_tfrecord.py"</a> script was used to convert the images and the csv files into tf record expected for tensorflow. On Linux, the following commands were run from the data directory:<br>
+The <a href="https://github.com/siddiqaa/psvcounter/blob/master/data/generate_tfrecord.py">generate_tfrecord.py</a> script was used to convert the images and the csv files into tf record expected for tensorflow. On Linux, the following commands were run from the data directory:<br>
 ```shell
 python3.6 generate_tfrecord.py --csv_input=train_labels.csv  --output_path=train.record
 
