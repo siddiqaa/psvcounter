@@ -84,6 +84,9 @@ Finally, the <a href="https://github.com/siddiqaa/psvcounter/blob/master/models/
 <li>Update the file location path to the pre-trained model in line 152.</li>
 </ol>
 
+<h4>Using Other Models</h4>
+You can also download and trainother pre-trained models for final layer training as long as you update and use the matching config file from the <a href="https://github.com/tensorflow/models/tree/master/research/object_detection/samples/configs>example config files in the repo</a>.
+
 <h2>Training</h2>
 <h3>Downloading the Training Scripts</h3>
 Finally, everything is ready to train. Training is done using scripts from the <a href="https://github.com/tensorflow/models">tensorflow models repository</a> and specifically the scripts in the <a href="https://github.com/tensorflow/models/tree/master/research/object_detection">object detection folder</a>. The repo should be cloned to your local directory and the script <a href="https://github.com/tensorflow/models/blob/master/research/setup.py">setup.py</a> in the research folder executed using pip before starting the training. <br>
@@ -92,7 +95,7 @@ Finally, everything is ready to train. Training is done using scripts from the <
 python3.6 pip -m setup.py install
 ```
 
-Installing the scripts as well as tensorflow on the Ubuntu machine that I used gave some unique installation errors and headaches that I had to research and resolve. You will likely face some errors and may have to do the same. If you get an error about "no module named 'depolyment'. Execute the following command from the models subirectory where you downloaded the models.
+Installing the scripts as well as tensorflow on the Ubuntu machine that I used gave some unique installation errors and headaches that I had to research and resolve. You will likely face some errors and may have to do the same. If you get an error about "no module named 'depolyment'". Execute the following command from the models subirectory in the repo you downloaded above.
 
 ```shell
 export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
@@ -104,16 +107,19 @@ The script to train the model is trainer.py and it should be executed using pyth
 python3.6 object_detection/train.py     --logtostderr     --pipeline_config_path=<INSERT YOUR PATH TO ssd_inception_v2_coco.config>    --train_dir=<INSERT YOUR PATH TO DATA FOLDER CONTAINING THE TRAINING DATA>
 ```
 
-Once the training scrip starts, you will see the training time per step as well as the loss. The loss should decrease overall but could up and down between adjacent training iterations. The configuration file is set to train for 500 steps but you can stop the training at anytime using the interrupt key combinations.
+Once the training script starts, you will see the training time per step as well as the loss. The loss should decrease overall but could go up a little between adjacent training iterations. The configuration file is set to train for 500 steps but you can stop the training at anytime using the interrupt key combinations.
 
 
-<h2>Using the Retrained Network Model</h2>
+<h3>Saving the Retrained Network Model</h3>
 When the training stops after reaching the training iteration limits or interrupted manually, the network model up to the last saved checkpoint can be obtained using the export_inference_graph.py script as follows:
 
 ```shell
 python3.6 object_detection/export_inference_graph.py     --input_type image_tensor     --pipeline_config_path <INSERT YOUR PATH TO ssd_inception_v2_coco.config>     --trained_checkpoint_prefix <INSERT YOUR PATH TO THE SAVED MODEL CHECKPOINT DIRECTORY>     --output_directory output_inference_graph.pb
 ```
 
+The command above will generat an output_inference_grap.pb file with the neural network model weights using the last available checkpoint saved data from training. The output_inference_grap.pb file is used in the actual object detection.
 
+
+ 
 
 <to be continued ....>
