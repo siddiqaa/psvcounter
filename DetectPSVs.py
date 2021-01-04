@@ -85,73 +85,73 @@ def detect_objects(image_np, sess, detection_graph):
         img.save("<CONFIGURE_PATH_TO_SAVING_THE_IMAGE_SEGMENTS_WITH_BOUNDINGBOXES>" + "_detected.jpg")
         # img.show()
 
-    pageHeight = 3300
-    pageWidth = 5100
+  pageHeight = 3300
+  pageWidth = 5100
 
-    cropHeight = int(pageHeight / 30)
-    cropWidth = int(pageWidth / 50)
+  cropHeight = int(pageHeight / 30)
+  cropWidth = int(pageWidth / 50)
 
-    pageIndex = 1
+  pageIndex = 1
 
-    with tf.Session(graph=detection_graph) as sess:
-        startTime = datetime.now()
+  with tf.Session(graph=detection_graph) as sess:
+      startTime = datetime.now()
 
-    imageNumpyArray = ndimage.imread("<CONFIGURE_PATH_TO_JPG_FILE_TO_CONDUCT_OBJECT_DETECTION_ON>")
+  imageNumpyArray = ndimage.imread("<CONFIGURE_PATH_TO_JPG_FILE_TO_CONDUCT_OBJECT_DETECTION_ON>")
 
-    overlapWidth = 10
+  overlapWidth = 10
 
-    #code below loads the jpg image into a single numpy array and extracts shorter segments to feed them individualy as input tensors into tensor_flow model
+  #code below loads the jpg image into a single numpy array and extracts shorter segments to feed them individualy as input tensors into tensor_flow model
 
-    segmentIndex = 0
-    while segmentIndex <= 1499:
-        if (segmentIndex == 0):
-            cropArray = imageNumpyArray[0:cropHeight + overlapWidth, 0:cropWidth + overlapWidth, :]
+  segmentIndex = 0
+  while segmentIndex <= 1499:
+      if (segmentIndex == 0):
+          cropArray = imageNumpyArray[0:cropHeight + overlapWidth, 0:cropWidth + overlapWidth, :]
 
-        # catch top right corner tile
-        elif (segmentIndex == 49):
-            cropArray = imageNumpyArray[0:cropHeight + overlapWidth,
-                    segmentIndex * cropWidth - overlapWidth:segmentIndex * cropWidth + cropWidth, :]
+      # catch top right corner tile
+      elif (segmentIndex == 49):
+          cropArray = imageNumpyArray[0:cropHeight + overlapWidth,
+                  segmentIndex * cropWidth - overlapWidth:segmentIndex * cropWidth + cropWidth, :]
 
-            # catch bottom left corner tile
-        elif (segmentIndex == 1450):
-            cropArray = imageNumpyArray[
-                        cropHeight * segmentIndex // 50 - overlapWidth:cropHeight * segmentIndex // 50 + cropHeight,
-                        0:cropWidth + overlapWidth, :]
-            # catch bottom right corner tile
-        elif (segmentIndex == 1499):
-            cropArray = imageNumpyArray[
-                        cropHeight * segmentIndex // 50 - cropHeight - overlapWidth:cropHeight * segmentIndex // 50,
-                        segmentIndex % 50 * cropWidth - overlapWidth:segmentIndex % 50 * cropWidth + cropWidth, :]
-            # catch right edge tiles so no overlap on left
-        elif (segmentIndex % 50 == 0):
-            # print(cropHeight*segmentIndex//50)
-            cropArray = imageNumpyArray[cropHeight * (segmentIndex // 50):cropHeight * (segmentIndex // 50) + cropHeight,
-                        0:cropWidth + overlapWidth, :]
-             # catch top edge tiles so no overlap on top
-        elif (segmentIndex <= 48):
-            # print(segmentIndex*cropWidth)
-            cropArray = imageNumpyArray[0:cropHeight + overlapWidth,
-                        segmentIndex * cropWidth:segmentIndex * cropWidth + cropWidth, :]
-            # catch left edge tiles so no overlap on left
-        elif (segmentIndex + 1) % 50 == 0:
-            # print(segmentIndex * cropWidth)
-            cropArray = imageNumpyArray[((segmentIndex + 1) // 50) * cropHeight - overlapWidth:((
-                                                                                                segmentIndex + 1) // 50) * cropHeight + cropHeight + overlapWidth,
-                        (segmentIndex) % 50 * cropWidth - overlapWidth:(segmentIndex) % 50 * cropWidth + cropWidth, :]
-            # catch bottom edge tiles so no overlap on top
-        elif (segmentIndex > 1450):
-            # print(segmentIndex * cropWidth)
-            cropArray = imageNumpyArray[((segmentIndex + 1) // 50) * cropHeight:((
-                                                                                 segmentIndex + 1) // 50) * cropHeight + cropHeight + overlapWidth,
-                        (segmentIndex) % 50 * cropWidth - overlapWidth:(segmentIndex) % 50 * cropWidth + cropWidth, :]
-         else:
-            cropArray = imageNumpyArray[(segmentIndex // 50) * cropHeight - overlapWidth: (
-                                                                                          segmentIndex // 50) * cropHeight + cropHeight + overlapWidth,
-                        (segmentIndex) % 50 * cropWidth - overlapWidth:(
-                                                                       segmentIndex) % 50 * cropWidth + cropWidth + overlapWidth,
-                        :]
-        detect_objects(cropArray, sess, detection_graph)
-        if segmentIndex % 150 == 0:
-            print(str(segmentIndex // 150 * 10) + " percent complete")
-    segmentIndex += 1
+          # catch bottom left corner tile
+      elif (segmentIndex == 1450):
+          cropArray = imageNumpyArray[
+                      cropHeight * segmentIndex // 50 - overlapWidth:cropHeight * segmentIndex // 50 + cropHeight,
+                      0:cropWidth + overlapWidth, :]
+          # catch bottom right corner tile
+      elif (segmentIndex == 1499):
+          cropArray = imageNumpyArray[
+                      cropHeight * segmentIndex // 50 - cropHeight - overlapWidth:cropHeight * segmentIndex // 50,
+                      segmentIndex % 50 * cropWidth - overlapWidth:segmentIndex % 50 * cropWidth + cropWidth, :]
+          # catch right edge tiles so no overlap on left
+      elif (segmentIndex % 50 == 0):
+          # print(cropHeight*segmentIndex//50)
+          cropArray = imageNumpyArray[cropHeight * (segmentIndex // 50):cropHeight * (segmentIndex // 50) + cropHeight,
+                      0:cropWidth + overlapWidth, :]
+           # catch top edge tiles so no overlap on top
+      elif (segmentIndex <= 48):
+          # print(segmentIndex*cropWidth)
+          cropArray = imageNumpyArray[0:cropHeight + overlapWidth,
+                      segmentIndex * cropWidth:segmentIndex * cropWidth + cropWidth, :]
+          # catch left edge tiles so no overlap on left
+      elif (segmentIndex + 1) % 50 == 0:
+          # print(segmentIndex * cropWidth)
+          cropArray = imageNumpyArray[((segmentIndex + 1) // 50) * cropHeight - overlapWidth:((
+                                                                                              segmentIndex + 1) // 50) * cropHeight + cropHeight + overlapWidth,
+                      (segmentIndex) % 50 * cropWidth - overlapWidth:(segmentIndex) % 50 * cropWidth + cropWidth, :]
+          # catch bottom edge tiles so no overlap on top
+      elif (segmentIndex > 1450):
+          # print(segmentIndex * cropWidth)
+          cropArray = imageNumpyArray[((segmentIndex + 1) // 50) * cropHeight:((
+                                                                               segmentIndex + 1) // 50) * cropHeight + cropHeight + overlapWidth,
+                      (segmentIndex) % 50 * cropWidth - overlapWidth:(segmentIndex) % 50 * cropWidth + cropWidth, :]
+       else:
+          cropArray = imageNumpyArray[(segmentIndex // 50) * cropHeight - overlapWidth: (
+                                                                                        segmentIndex // 50) * cropHeight + cropHeight + overlapWidth,
+                      (segmentIndex) % 50 * cropWidth - overlapWidth:(
+                                                                     segmentIndex) % 50 * cropWidth + cropWidth + overlapWidth,
+                      :]
+      detect_objects(cropArray, sess, detection_graph)
+      if segmentIndex % 150 == 0:
+          print(str(segmentIndex // 150 * 10) + " percent complete")
+  segmentIndex += 1
 
